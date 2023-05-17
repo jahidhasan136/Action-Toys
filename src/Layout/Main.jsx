@@ -5,7 +5,9 @@ const Main = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <Outlet></Outlet>
+            <div className="container mx-auto max-w-[1240px]">
+                <Outlet></Outlet>
+            </div>
         </div>
     );
 };
