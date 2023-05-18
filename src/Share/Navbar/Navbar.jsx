@@ -1,10 +1,11 @@
 import { FaRegUserCircle } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 
 const Navbar = () => {
     return (
             <div className="flex justify-center">
-                <div className="navbar fixed text-white z-50 p-5 container mx-auto max-w-[1240px]">
+                <div className="navbar fixed text-white z-50 p-8 container mx-auto max-w-[1240px]">
                 <div className="navbar-start">
 
                     {/* Mobile responsive */}
@@ -18,6 +19,7 @@ const Navbar = () => {
                             <li>My Toys</li>
                             <li>Add A Toy</li>
                             <li>Blogs</li>
+                            <Link to="/login">login</Link>
                         </ul>
                     </div>
                     <a className="text-3xl">ActionToys</a>
@@ -32,6 +34,7 @@ const Navbar = () => {
                         <li>My Toys</li>
                         <li>Add A Toy</li>
                         <li>Blogs</li>
+                        <Link to="/login">login</Link>
                     </ul>
                 </div>
                 <div className="navbar-end">
