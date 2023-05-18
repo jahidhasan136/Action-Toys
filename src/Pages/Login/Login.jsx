@@ -1,8 +1,17 @@
 import React from 'react';
 import { FaGoogle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { AuthContext } from '../Provider/AuthProvider';
+import { useState } from 'react';
+
+
 
 const Login = () => {
+
+    const {login} = useContext(AuthContext)
+    const [error, setError] = useState('')
+    const [success, setSuccess] = useState('')
 
     const handleLogin = event => {
         event.preventDefault()
@@ -11,6 +20,21 @@ const Login = () => {
         const password = form.password.value 
         const newUser = {email, password}
         console.log(newUser)
+
+        login(email, password)
+        .then(result => {
+            const login = result.user 
+            console.log(login)
+            form.reset()
+            setError('')
+            if(login){
+                setSuccess('Login Successfully')
+            }
+        })
+        .catch(error => {
+            setError(error.message)
+            setSuccess('')
+        })
     }
 
     return (
@@ -23,18 +47,20 @@ const Login = () => {
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input type="email" placeholder="email" name="email" className="input input-bordered" />
+                            <input type="email" placeholder="email" name="email" className="input input-bordered" required/>
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="password" name="password" placeholder="password" className="input input-bordered" />
+                            <input type="password" name="password" placeholder="password" className="input input-bordered" required/>
                             <label className="label">
                                 <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                             </label>
                         </div>
-                        <div className="form-control mt-6">
+                        <small className="mt-6 mb-2 text-red-500"><p>{error}</p></small>
+                        <small className="text-green-500"><p>{success}</p></small>
+                        <div className="form-control">
                             <button className="btn btn-primary">Login</button>
                         </div>
                         <small>Dont Have an account? <Link to="/register" className="font-bold btn-link">Register</Link></small>
