@@ -9,7 +9,7 @@ import { useState } from 'react';
 
 const Login = () => {
 
-    const {login} = useContext(AuthContext)
+    const {login, googleLogin} = useContext(AuthContext)
     const [error, setError] = useState('')
     const [success, setSuccess] = useState('')
 
@@ -28,6 +28,23 @@ const Login = () => {
             form.reset()
             setError('')
             if(login){
+                setSuccess('Login Successfully')
+            }
+        })
+        .catch(error => {
+            setError(error.message)
+            setSuccess('')
+        })
+    }
+
+    const handleGoogleLogin = event => {
+        event.preventDefault()
+        googleLogin()
+        .then(result => {
+            const google = result.user 
+            console.log(google)
+            setError('')
+            if(google){
                 setSuccess('Login Successfully')
             }
         })
@@ -66,7 +83,7 @@ const Login = () => {
                         <small>Dont Have an account? <Link to="/register" className="font-bold btn-link">Register</Link></small>
                     </form>
                     <p className="text-center text-xl font-bold">or</p>
-                    <div className="p-5 text-center">
+                    <div onClick={handleGoogleLogin} className="p-5 text-center">
                         <button className="btn bg-blue-600 flex gap-3 mx-auto"><FaGoogle className="text-lg"></FaGoogle> Sign in with Google</button>
                     </div>
                 </div>
