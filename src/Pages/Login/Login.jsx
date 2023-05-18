@@ -3,23 +3,33 @@ import { FaGoogle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Login = () => {
+
+    const handleLogin = event => {
+        event.preventDefault()
+        const form = event.target
+        const email = form.email.value 
+        const password = form.password.value 
+        const newUser = {email, password}
+        console.log(newUser)
+    }
+
     return (
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content">
                 <div className="card flex-shrink-0  w-[450px] shadow-2xl bg-base-100">
                     <h1 className="text-4xl text-center pt-3 font-bold">Please Login !!</h1>
-                    <form className="card-body pb-2">
+                    <form onSubmit={handleLogin} className="card-body pb-2">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input type="email" placeholder="email" className="input input-bordered" />
+                            <input type="email" placeholder="email" name="email" className="input input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="password" placeholder="password" className="input input-bordered" />
+                            <input type="password" name="password" placeholder="password" className="input input-bordered" />
                             <label className="label">
                                 <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                             </label>
