@@ -15,23 +15,80 @@ import img12 from '../../../assets/toys/img12.jpg'
 const ToyGallery = () => {
     return (
         <div className="my-16">
-            <h2 className="text-3xl font-bold md:text-center">Gallery Section</h2>
-            <div className="grid md:grid-cols-2 grid-cols-4">
-                <div>
-                    <img className="" src={img1} alt="" />
+            <h2 className="text-3xl font-bold md:text-center mb-10">Toys Gallery</h2>
+            <div className="grid justify-center max-w-[1240px] mx-auto">
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 md:gap-10 lg:gap-32">
+                    <div className="w-80 h-80">
+                        <figure><img className="h-52 w-full" src={img1} alt="Shoes" /></figure>
+                        <div className="card-body">
+                            <h2 className="card-title">Toys</h2>
+                            <p>This is a brand new toys</p>
+                        </div>
+                    </div>
+                    <div className=" w-80 h-80">
+                        <figure><img className="h-52 w-full" src={img2} alt="Shoes" /></figure>
+                        <div className="card-body">
+                            <h2 className="card-title">Toys</h2>
+                            <p>This is a brand new toys</p>
+                        </div>
+                    </div>
+                    <div className=" w-80 h-80">
+                        <figure><img className="h-52 w-full" src={img3} alt="Shoes" /></figure>
+                        <div className="card-body">
+                            <h2 className="card-title">Toys</h2>
+                            <p>This is a brand new toys</p>
+                        </div>
+                    </div>
+                    <div className=" w-80 h-80">
+                        <figure><img className="h-52 w-full" src={img4} alt="Shoes" /></figure>
+                        <div className="card-body">
+                            <h2 className="card-title">Toys</h2>
+                            <p>This is a brand new toys</p>
+                        </div>
+                    </div>
+                    <div className=" w-80 h-80">
+                        <figure><img className="h-52 w-full" src={img5} alt="Shoes" /></figure>
+                        <div className="card-body">
+                            <h2 className="card-title">Toys</h2>
+                            <p>This is a brand new toys</p>
+                        </div>
+                    </div>
+                    <div className=" w-80 h-80">
+                        <figure><img className="h-52 w-full" src={img6} alt="Shoes" /></figure>
+                        <div className="card-body">
+                            <h2 className="card-title">Toys</h2>
+                            <p>This is a brand new toys</p>
+                        </div>
+                    </div>
+                    <div className=" w-80 h-80">
+                        <figure><img className="h-52 w-full" src={img7} alt="Shoes" /></figure>
+                        <div className="card-body">
+                            <h2 className="card-title">Toys</h2>
+                            <p>This is a brand new toys</p>
+                        </div>
+                    </div>
+                    <div className=" w-80 h-80">
+                        <figure><img className="h-52 w-full" src={img8} alt="Shoes" /></figure>
+                        <div className="card-body">
+                            <h2 className="card-title">Toys</h2>
+                            <p>This is a brand new toys</p>
+                        </div>
+                    </div>
+                    <div className=" w-80 h-80">
+                        <figure><img className="h-52 w-full" src={img9} alt="Shoes" /></figure>
+                        <div className="card-body">
+                            <h2 className="card-title">Toys</h2>
+                            <p>This is a brand new toys</p>
+                        </div>
+                    </div>
+                    <div className=" w-80 h-80">
+                        <figure><img className="h-52 w-full" src={img10} alt="Shoes" /></figure>
+                        <div className="card-body">
+                            <h2 className="card-title">Toys</h2>
+                            <p>This is a brand new toys</p>
+                        </div>
+                    </div>
                 </div>
-                <img src={img2} alt="" />
-                <img src={img3} alt="" />
-                <img src={img4} alt="" />
-                <img src={img5} alt="" />
-                <img src={img6} alt="" />
-                <img src={img7} alt="" />
-                <img src={img8} alt="" />
-                <img src={img9} alt="" />
-                <img src={img10} alt="" />
-                <img src={img11} alt="" />
-                <img src={img12} alt="" />
-                {/* <img src={img13} alt="" /> */}
             </div>
         </div>
     );
