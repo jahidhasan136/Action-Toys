@@ -11,10 +11,10 @@ const Navbar = () => {
 
     const handleLogout = () => {
         logout()
-        .then(()=>{})
-        .catch(error => {
-            console.error(error.message)
-        })
+            .then(() => { })
+            .catch(error => {
+                console.error(error.message)
+            })
     }
 
 
@@ -58,24 +58,37 @@ const Navbar = () => {
                         <li>All Toys</li>
                         <li>Blogs</li>
                         {
-                                user
-                                    ?
-                                    <>
-                                        <li>My Toys</li>
-                                        <li>Add A Toy</li>
-                                        <li className='cursor-pointer'>Log out</li>
-                                    </>
-                                    :
-                                    <Link to="/login" className='flex items-center gap-2'><FaUser></FaUser> login</Link>
-                            }
+                            user
+                                ?
+                                <>
+                                    <li>My Toys</li>
+                                    <li>Add A Toy</li>
+                                    <li className='cursor-pointer'>Log out</li>
+                                </>
+                                :
+                                <Link to="/login" className='flex items-center gap-2'><FaUser></FaUser> login</Link>
+                        }
                     </ul>
                 </div>
                 <div className="navbar-end">
+
                     <div className="dropdown dropdown-end dropdown-hover">
-                        <label tabIndex={0} className="text-4xl"><FaRegUserCircle></FaRegUserCircle></label>
-                        <ul tabIndex={0} className="dropdown-content menu p-5 shadow bg-base-100 text-white rounded-box w-52">
-                            <li>{user?.displayName}</li>
-                        </ul>
+                        <label tabIndex={0} className="text-4xl">
+                            {
+                                user
+                                    ?
+                                    <img className=' w-10 rounded-full' src={user?.photoURL} alt="" />
+                                    :
+                                    <FaRegUserCircle></FaRegUserCircle>
+                            }
+                        </label>
+                        {
+                            user &&
+                            <ul tabIndex={0} className="dropdown-content menu p-5 shadow bg-base-100 text-white rounded-box w-52">
+                                <li>{user?.displayName}</li>
+                            </ul>
+
+                        }
                     </div>
                 </div>
             </div>

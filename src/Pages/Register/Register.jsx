@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import { useState } from 'react';
@@ -11,6 +11,7 @@ const Register = () => {
     const {createUser} = useContext(AuthContext)
     const [error, setError] = useState('')
     const [success, setSuccess] = useState('')
+    const navigate = useNavigate()
 
     const handleRegister = event => {
         event.preventDefault()
@@ -29,6 +30,7 @@ const Register = () => {
             form.reset()
             setError('')
             handleProfile(result.user, name, photo)
+            navigate('/')
             if(signUp){
                 setSuccess('Your Account Successfully created')
             }
