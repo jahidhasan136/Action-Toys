@@ -1,0 +1,92 @@
+[
+    {
+      "name": "Thor",
+      "_id": 554134483355,
+      "picture": "https://i.ibb.co/T8RQKkG/img3.jpg",
+      "price": "$19.99",
+      "rating": 2.5,
+      "quantity": 100,
+      "subcategory": "avengers"
+    },
+    {
+      "name": "Groot",
+      "_id": 554134483352,
+      "picture": "https://i.ibb.co/0J1XkPm/img8.jpg",
+      "price": "$24.99",
+      "rating": 2,
+      "quantity": 75,
+      "subcategory": "avengers"
+    },
+    {
+      "name": "Hulk",
+      "_id": 554134483351,
+      "picture": "https://i.ibb.co/RT3f3zz/img4.jpg",
+      "price": "$29.99",
+      "rating": 1,
+      "quantity": 120,
+      "subcategory": "marvel"
+    },
+    {
+      "name": "Spider Man",
+      "_id": 554134483353,
+      "picture": "https://i.ibb.co/1fxsKcc/img5.jpg",
+      "price": "$17.99",
+      "rating": 2,
+      "quantity": 50,
+      "subcategory": "marvel"
+    },
+    {
+      "name": "Ree",
+      "_id": 554134483357,
+      "picture": "https://i.ibb.co/19CpPPR/img11.jpg",
+      "price": "$22.99",
+      "rating": 1.5,
+      "quantity": 90,
+      "subcategory": "starwars"
+    },
+    {
+      "name": "Storm Trooper",
+      "_id": 554134483356,
+      "picture": "https://i.ibb.co/1XVVjtK/img1.jpg",
+      "price": "$32.99",
+      "rating": 3,
+      "quantity": 80,
+      "subcategory": "starwars"
+    },
+    {
+      "name": "Pirate Captain",
+      "_id": 5541344833510,
+      "picture": "https://example.com/pirate-captain.jpg",
+      "price": "$21.99",
+      "rating": 4.3,
+      "quantity": 65,
+      "subcategory": "Pirates"
+    },
+    {
+      "name": "Alien Invader",
+      "_id": 554134483354,
+      "picture": "https://example.com/alien-invader.jpg",
+      "price": "$26.99",
+      "rating": 4.7,
+      "quantity": 110,
+      "subcategory": "Sci-Fi"
+    },
+    {
+      "name": "Action Sports Star",
+      "_id": 5541344833512,
+      "picture": "https://example.com/action-sports-star.jpg",
+      "price": "$18.99",
+      "rating": 4.1,
+      "quantity": 60,
+      "subcategory": "Sports"
+    },
+    {
+      "name": "Secret Agent Spy",
+      "_id": 5541344833515,
+      "picture": "https://example.com/secret-agent-spy.jpg",
+      "price": "$23.99",
+      "rating": 4.4,
+      "quantity": 95,
+      "subcategory": "Espionage"
+    }
+  ]

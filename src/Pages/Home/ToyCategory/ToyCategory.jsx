@@ -1,45 +1,68 @@
 import React from 'react';
+import { Rating } from '@smastrom/react-rating'
+import '@smastrom/react-rating/style.css'
 import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import { useState, useEffect } from 'react';
+import img3 from '../../../assets/toys/img3.jpg'
+import img8 from '../../../assets/toys/img8.jpg'
+import img4 from '../../../assets/toys/img4.jpg'
+import img5 from '../../../assets/toys/img5.jpg'
+import img1 from '../../../assets/toys/img1.jpg'
+import img11 from '../../../assets/toys/img11.jpg'
+import ToyCardCategory from '../ToyCardCategory/ToyCardCategory';
+
 
 const ToyCategory = () => {
+    const [rating, setRating] = useState(3);
+    const [toys, setToys] = useState([])
+    const [category, setCategory] = useState('all toys')
+
+    useEffect(() => {
+        fetch(`/public/Data/ToysData.json`)
+            .then(res => res.json())
+            .then(data => {
+                setToys(data)
+                if (data.length) {
+                    const remaining = data.filter(toy => toy.subcategory === category)
+                    setToys(remaining)
+                }
+            })
+    }, [category])
+
     return (
-        <div>
+        <div className="max-w-[1240px] mx-auto">
             <Tabs forceRenderTabPanel defaultIndex={1}>
-                <TabList>
+                <TabList className="text-center">
                     <Tab>Action Toys</Tab>
                 </TabList>
                 <TabPanel>
-                    <Tabs forceRenderTabPanel>
-                        <TabList>
-                            <Tab>Avengers Toys</Tab>
-                            <Tab>Marvel Toys</Tab>
-                            <Tab>Star War Toys</Tab>
+                    <Tabs forceRenderTabPanel className="grid justify-center">
+                        <TabList className="text-center">
+                            <Tab onClick={()=> setCategory('avengers')}>Avengers Toys</Tab>
+                            <Tab onClick={()=> setCategory('marvel')}>Marvel Toys</Tab>
+                            <Tab onClick={()=> setCategory('starwars')}>Star War Toys</Tab>
                         </TabList>
-                        <TabPanel>
-                            <p>Husband of Marge; father of Bart, Lisa, and Maggie.</p>
-                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/02/Homer_Simpson_2006.png/212px-Homer_Simpson_2006.png" alt="Homer Simpson" />
+                        <TabPanel className="">
+                            {
+                                toys.map(toy => <ToyCardCategory key={toy._id} toy={toy}></ToyCardCategory>)
+                            }
                         </TabPanel>
                         <TabPanel>
-                            <p>Wife of Homer; mother of Bart, Lisa, and Maggie.</p>
-                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0b/Marge_Simpson.png/220px-Marge_Simpson.png" alt="Marge Simpson" />
+                            {
+                                toys.map(toy => <ToyCardCategory key={toy._id} toy={toy}></ToyCardCategory>)
+                            }
                         </TabPanel>
                         <TabPanel>
-                            <p>Oldest child and only son of Homer and Marge; brother of Lisa and Maggie.</p>
-                            <img src="https://upload.wikimedia.org/wikipedia/en/a/aa/Bart_Simpson_200px.png" alt="Bart Simpson" />
-                        </TabPanel>
-                        <TabPanel>
-                            <p>Middle child and eldest daughter of Homer and Marge; sister of Bart and Maggie.</p>
-                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/ec/Lisa_Simpson.png/200px-Lisa_Simpson.png" alt="Lisa Simpson" />
-                        </TabPanel>
-                        <TabPanel>
-                            <p>Youngest child and daughter of Homer and Marge; sister of Bart and Lisa.</p>
-                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9d/Maggie_Simpson.png/223px-Maggie_Simpson.png" alt="Maggie Simpson" />
+                            {
+                                toys.map(toy => <ToyCardCategory key={toy._id} toy={toy}></ToyCardCategory>)
+                            }
                         </TabPanel>
                     </Tabs>
                 </TabPanel>
-                
+
             </Tabs>
+
         </div>
     );
 };
