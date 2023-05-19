@@ -1,0 +1,6 @@
+.ratings{
+    --rr--fill-on-color: red!important;
+    --rr--fill-off-color: black!important;
+    --rr--stroke-on-color: red!important;
+    --rr--stroke-off-color: red!important;
+}
