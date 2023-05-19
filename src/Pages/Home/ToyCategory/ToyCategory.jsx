@@ -19,7 +19,7 @@ const ToyCategory = () => {
     const [category, setCategory] = useState('all toys')
 
     useEffect(() => {
-        fetch(`/public/Data/ToysData.json`)
+        fetch('http://localhost:5000/toys')
             .then(res => res.json())
             .then(data => {
                 setToys(data)
