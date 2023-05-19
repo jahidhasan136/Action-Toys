@@ -1,13 +1,24 @@
 import { useContext } from 'react';
-import { FaRegUserCircle } from 'react-icons/fa';
+import { FaRegUserCircle, FaUser } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Pages/Provider/AuthProvider';
 
 
 const Navbar = () => {
 
-    const {user} = useContext(AuthContext)
+    const { user, logout } = useContext(AuthContext)
     console.log(user)
+
+    const handleLogout = () => {
+        logout()
+        .then(()=>{})
+        .catch(error => {
+            console.error(error.message)
+        })
+    }
+
+
+
 
     return (
         <div className="flex justify-center">
@@ -22,10 +33,18 @@ const Navbar = () => {
                         <ul tabIndex={0} className=" text-white menu menu-compact dropdown-content mt-3 p-5 shadow bg-base-100 rounded-box w-52 grid gap-3">
                             <Link to="/">Home</Link>
                             <li>All Toys</li>
-                            <li>My Toys</li>
-                            <li>Add A Toy</li>
                             <li>Blogs</li>
-                            <Link to="/login">login</Link>
+                            {
+                                user
+                                    ?
+                                    <>
+                                        <li>My Toys</li>
+                                        <li>Add A Toy</li>
+                                        <li onClick={handleLogout} className='cursor-pointer'>Log out</li>
+                                    </>
+                                    :
+                                    <Link to="/login" className='flex items-center gap-2'><FaUser></FaUser> login</Link>
+                            }
                         </ul>
                     </div>
                     <a className="text-3xl">ActionToys</a>
@@ -37,18 +56,25 @@ const Navbar = () => {
                     <ul className="menu menu-horizontal px-1 gap-8">
                         <Link to="/">Home</Link>
                         <li>All Toys</li>
-                        <li>My Toys</li>
-                        <li>Add A Toy</li>
                         <li>Blogs</li>
-                        <Link to="/login">login</Link>
+                        {
+                                user
+                                    ?
+                                    <>
+                                        <li>My Toys</li>
+                                        <li>Add A Toy</li>
+                                        <li className='cursor-pointer'>Log out</li>
+                                    </>
+                                    :
+                                    <Link to="/login" className='flex items-center gap-2'><FaUser></FaUser> login</Link>
+                            }
                     </ul>
                 </div>
                 <div className="navbar-end">
                     <div className="dropdown dropdown-end dropdown-hover">
                         <label tabIndex={0} className="text-4xl"><FaRegUserCircle></FaRegUserCircle></label>
-                        <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 text-white rounded-box w-52">
-                            <li><a>Item 1</a></li>
-                            <li><a>Item 2</a></li>
+                        <ul tabIndex={0} className="dropdown-content menu p-5 shadow bg-base-100 text-white rounded-box w-52">
+                            <li>{user?.displayName}</li>
                         </ul>
                     </div>
                 </div>

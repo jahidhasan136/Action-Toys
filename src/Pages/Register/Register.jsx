@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import { useState } from 'react';
+import { updateProfile } from 'firebase/auth';
 
 
 const Register = () => {
@@ -27,6 +28,7 @@ const Register = () => {
             console.log(signUp)
             form.reset()
             setError('')
+            handleProfile(result.user, name, photo)
             if(signUp){
                 setSuccess('Your Account Successfully created')
             }
@@ -35,6 +37,18 @@ const Register = () => {
             setError(error.message)
             setSuccess('')
         })
+    }
+
+    const handleProfile = (user, name, photo) => {
+        updateProfile(user, {
+            displayName: name,
+            photoURL: photo
+        })
+            .then(() => { 
+            })
+            .catch(error => {
+                setError(error.message)
+            })
     }
 
     return (
@@ -70,7 +84,7 @@ const Register = () => {
                         <small className="mt-6 text-red-500"><p>{error}</p></small>
                         <small className="text-green-500"><p>{success}</p></small>
                         <div className="form-control">
-                            <button className="btn btn-primary">Login</button>
+                            <button className="btn btn-primary">Sign Up</button>
                         </div>
                         <small className="p-4">Already Have an account? <Link to="/login" className="font-bold btn-link">Login</Link></small>
                     </form>
