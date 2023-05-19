@@ -1,8 +1,14 @@
+import { useContext } from 'react';
 import { FaRegUserCircle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Pages/Provider/AuthProvider';
 
 
 const Navbar = () => {
+
+    const {user} = useContext(AuthContext)
+    console.log(user)
+
     return (
         <div className="flex justify-center">
             <div className="navbar fixed text-white z-50 p-8 container mx-auto max-w-[1240px]">

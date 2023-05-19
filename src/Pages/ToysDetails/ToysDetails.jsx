@@ -1,7 +1,7 @@
 import { Rating } from '@smastrom/react-rating';
 import { useLoaderData } from 'react-router-dom';
 import './ToysDetails.css'
-import { FaHeart, FaRegHeart, FaShoppingCart } from 'react-icons/fa';
+import { FaRegHeart, FaShoppingCart } from 'react-icons/fa';
 
 const ToysDetails = () => {
     const categoryDetails = useLoaderData()
@@ -24,7 +24,7 @@ const ToysDetails = () => {
                     </p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, magnam! Lorem ipsum dolor sit amet.</p>
                     <div className='flex items-center gap-8'>
-                        <p className='bg-orange-700 inline-block px-4 py-1'>Quantity- {quantity}</p>
+                        <p className='inline-block px-4 py-1 bg-gradient-to-t from-[#F2713A] to-[#B62767]'>Quantity- {quantity}</p>
                         <button className='btn rounded-none flex gap-2 bg-gradient-to-r from-[#F2713A] to-[#B62767] hover:from-[#B63767] hover:to-[#F2713A]'>Add to Cart <FaShoppingCart className='text-lg'></FaShoppingCart></button>
                     </div>
                     <p className='flex items-center gap-2'><FaRegHeart></FaRegHeart> Add to whislist</p>
