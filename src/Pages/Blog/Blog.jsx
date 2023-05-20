@@ -1,6 +1,8 @@
+import UseTitles from "../../Share/Hooks/UseTitles";
 
 
 const Blog = () => {
+    UseTitles('Blogs')
     return (
         <div className="my-24 max-w-[1240px] space-y-4 mx-auto p-10">
             <div>

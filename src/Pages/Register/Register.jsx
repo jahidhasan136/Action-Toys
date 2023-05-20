@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import { useState } from 'react';
 import { updateProfile } from 'firebase/auth';
+import UseTitles from '../../Share/Hooks/UseTitles';
 
 
 const Register = () => {
@@ -11,6 +12,7 @@ const Register = () => {
     const [error, setError] = useState('')
     const [success, setSuccess] = useState('')
     const navigate = useNavigate()
+    UseTitles('Registration')
 
     const handleRegister = event => {
         event.preventDefault()

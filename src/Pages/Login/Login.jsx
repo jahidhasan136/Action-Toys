@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import { useState } from 'react';
+import UseTitles from '../../Share/Hooks/UseTitles';
 
 
 
@@ -14,6 +15,7 @@ const Login = () => {
     const navigate = useNavigate()
     const location = useLocation()
     const from = location.state?.from?.pathname || '/'
+    UseTitles('login')
 
     const handleLogin = event => {
         event.preventDefault()
@@ -47,6 +49,7 @@ const Login = () => {
             const google = result.user 
             console.log(google)
             setError('')
+            navigate(from, {replace: true})
             if(google){
                 setSuccess('Login Successfully')
             }

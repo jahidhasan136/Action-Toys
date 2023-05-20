@@ -64,7 +64,7 @@ const Navbar = () => {
                                 <>
                                     <li>My Toys</li>
                                     <li>Add A Toy</li>
-                                    <li className='cursor-pointer'>Log out</li>
+                                    <li onClick={handleLogout} className='cursor-pointer'>Log out</li>
                                 </>
                                 :
                                 <Link to="/login" className='flex items-center gap-2'><FaUser></FaUser> login</Link>

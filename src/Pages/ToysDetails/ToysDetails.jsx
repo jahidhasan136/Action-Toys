@@ -2,11 +2,13 @@ import { Rating } from '@smastrom/react-rating';
 import { useLoaderData } from 'react-router-dom';
 import './ToysDetails.css'
 import { FaRegHeart, FaShoppingCart } from 'react-icons/fa';
+import UseTitles from '../../Share/Hooks/UseTitles';
 
 const ToysDetails = () => {
     const categoryDetails = useLoaderData()
     console.log(categoryDetails)
     const { picture, name, price, quantity, rating } = categoryDetails
+    UseTitles('Toy Details')
     return (
         <div className="my-32 max-w-[1240px] mx-auto p-10">
             <div className=' md:flex gap-10'>
