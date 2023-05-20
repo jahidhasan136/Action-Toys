@@ -48,7 +48,7 @@ const Navbar = () => {
                             }
                         </ul>
                     </div>
-                    <img className="w-20" src={logo} alt="" />
+                    <Link to="/"><img className="w-20" src={logo} alt="" /></Link>
                 </div>
 
                 {/* Desktop responsive */}

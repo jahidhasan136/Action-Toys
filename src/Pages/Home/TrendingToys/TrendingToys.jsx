@@ -7,8 +7,8 @@ const TrendingToys = () => {
     return (
         <div className="mb-8 max-w-[1240px] mx-auto p-10">
             <h1 className="text-center text-5xl font-bold mb-10">Our Trending Toys</h1>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 justify-center">
-                <div className="card card-compact h-96 w-96 bg-base-100 shadow-xl">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 justify-center lg:gap-8">
+                <div className="card card-compact h-96 w-96 bg-base-100 shadow-xl" data-aos="zoom-in-right">
                     <figure><img src={img1} alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">Strom Tropper</h2>
@@ -19,7 +19,7 @@ const TrendingToys = () => {
                         </div>
                     </div>
                 </div>
-                <div className="card card-compact h-96 w-96 bg-base-100 shadow-xl">
+                <div className="card card-compact h-96 w-96 bg-base-100 shadow-xl" data-aos="zoom-in-left">
                     <figure><img src={img5} alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">Spinder Man</h2>
@@ -30,7 +30,7 @@ const TrendingToys = () => {
                         </div>
                     </div>
                 </div>
-                <div className="card card-compact h-96 w-96 bg-base-100 shadow-xl">
+                <div className="card card-compact h-96 w-96 bg-base-100 shadow-xl" data-aos="zoom-in-right">
                     <figure><img src={img3} alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">Thor</h2>
@@ -41,7 +41,7 @@ const TrendingToys = () => {
                         </div>
                     </div>
                 </div>
-                <div className="card card-compact h-96 w-96 bg-base-100 shadow-xl">
+                <div className="card card-compact h-96 w-96 bg-base-100 shadow-xl" data-aos="zoom-in-left">
                     <figure><img src={img10} alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">Super Man</h2>
