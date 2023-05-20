@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaGoogle } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
