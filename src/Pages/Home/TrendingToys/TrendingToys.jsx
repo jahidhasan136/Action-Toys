@@ -1,12 +1,12 @@
-import img1 from '../../../assets/toys/img1.jpg'
-import img5 from '../../../assets/toys/img5.jpg'
-import img3 from '../../../assets/toys/img3.jpg'
-import img10 from '../../../assets/toys/img10.jpg'
+import img1 from '../../../assets/trending/img1.jpg'
+import img5 from '../../../assets/trending/img3.jpg'
+import img3 from '../../../assets/trending/img5.jpg'
+import img10 from '../../../assets/trending/img10.jpg'
 
 const TrendingToys = () => {
     return (
         <div className="mb-8 max-w-[1240px] mx-auto p-10">
-            <h1 className="text-center text-4xl font-bold mb-10">Our Trending Toys</h1>
+            <h1 className="text-center text-5xl font-bold mb-10">Our Trending Toys</h1>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 justify-center">
                 <div className="card card-compact h-96 w-96 bg-base-100 shadow-xl">
                     <figure><img src={img1} alt="Shoes" /></figure>

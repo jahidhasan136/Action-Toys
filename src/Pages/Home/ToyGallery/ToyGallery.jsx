@@ -13,7 +13,7 @@ import img10 from '../../../assets/toys/img10.jpg'
 const ToyGallery = () => {
     return (
         <div className="my-16">
-            <h2 className="text-4xl font-bold text-center mb-10">Toys Gallery</h2>
+            <h2 className="text-5xl font-bold text-center mb-10">Toys Gallery</h2>
             <div className="grid justify-center max-w-[1240px] mx-auto">
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 md:gap-5 lg:gap-20">
                     <div className="w-80 h-80 hover:shadow-2xl">
