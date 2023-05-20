@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { FaRegUserCircle, FaUser } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Pages/Provider/AuthProvider';
+import logo from '../../assets/logo.png'
 
 
 const Navbar = () => {
@@ -47,7 +48,7 @@ const Navbar = () => {
                             }
                         </ul>
                     </div>
-                    <a className="text-3xl">ActionToys</a>
+                    <img className="w-20" src={logo} alt="" />
                 </div>
 
                 {/* Desktop responsive */}
