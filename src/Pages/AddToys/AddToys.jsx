@@ -1,10 +1,11 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
+import { toast } from "react-toastify";
+import UseTitles from "../../Share/Hooks/UseTitles";
 
 
 const AddToys = () => {
-    
+    UseTitles('Add-Toys')
     const {user} = useContext(AuthContext)
 
     const handleAddToy = event => {
@@ -40,6 +41,7 @@ const AddToys = () => {
         .then(res => res.json())
         .then(result => {
             console.log(result)
+            toast("Toys Added Successfull")
         })
         form.reset()
     }

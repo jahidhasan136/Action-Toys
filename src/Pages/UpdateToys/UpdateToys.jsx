@@ -1,10 +1,13 @@
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { useLoaderData } from "react-router-dom";
+import { toast } from "react-toastify";
+import UseTitles from "../../Share/Hooks/UseTitles";
 
 
 const UpdateToys = () => {
     const {user} = useContext(AuthContext)
+    UseTitles('Updated-Toys')
     const toys = useLoaderData()
 
     const { name, subcategory, quantity, price, _id, rating, picture, description } = toys
@@ -42,6 +45,9 @@ const UpdateToys = () => {
         .then(res => res.json())
         .then(result => {
             console.log(result)
+            if(result.modifiedCount > 0){
+            toast("Updated Successfully")
+            }
         })
         form.reset()
     }

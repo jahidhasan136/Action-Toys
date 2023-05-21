@@ -3,10 +3,12 @@ import { useEffect } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { useState } from "react";
 import MyToysTable from "../MyToysTable/MyToysTable";
+import { toast } from "react-toastify";
+import UseTitles from "../../Share/Hooks/UseTitles";
 
 
 const MyToys = () => {
-
+    UseTitles('My-Toys')
     const { user } = useContext(AuthContext)
     const [myToys, setMyToys] = useState([])
     const [sort, setSort] = useState(null)
@@ -40,6 +42,7 @@ const MyToys = () => {
                 if (data.deletedCount > 0) {
                     const remaining = myToys.filter(toy => toy._id !== id)
                     setMyToys(remaining)
+                    toast("Delete This Toy Items")
                 }
 
             })
@@ -48,8 +51,10 @@ const MyToys = () => {
     return (
         <div className="my-24 max-w-[1240px] p-10 mx-auto        ">
             <div className="overflow-x-auto w-full">
-                <button onClick={() => setSort("low")}>Low Price</button>
-                <button onClick={() => setSort("high")}>High Price</button>
+                <div className="flex justify-end mb-5 gap-3">
+                    <button className="btn btn-outline btn-warning" onClick={() => setSort("low")}>Low Price</button>
+                    <button className="btn btn-outline btn-warning" onClick={() => setSort("high")}>High Price</button>
+                </div>
                 <table className="table w-full">
                     {/* head */}
                     <thead className="border">

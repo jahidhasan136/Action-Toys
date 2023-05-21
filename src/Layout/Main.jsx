@@ -2,6 +2,8 @@ import { Outlet, useNavigation } from "react-router-dom";
 import Navbar from "../Share/Navbar/Navbar";
 import Footer from "../Share/Footer/Footer";
 import { BallTriangle } from "react-loader-spinner";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Main = () => {
     const navigation = useNavigation();
@@ -27,6 +29,7 @@ const Main = () => {
             <Navbar></Navbar>
             {body}
             <Footer></Footer>
+            <ToastContainer />
         </div>
     );
 };
