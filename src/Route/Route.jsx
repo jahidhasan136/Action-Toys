@@ -12,6 +12,7 @@ import Blog from "../Pages/Blog/Blog";
 import AllToys from "../Pages/AllToys/AllToys";
 import AddToys from "../Pages/AddToys/AddToys";
 import MyToys from "../Pages/MyToys/MyToys";
+import UpdateToys from "../Pages/UpdateToys/UpdateToys";
 
 
 
@@ -54,6 +55,11 @@ const router = createBrowserRouter([
       {
         path: '/my-toys',
         element: <MyToys></MyToys>
+      },
+      {
+        path: '/update-toys/:id',
+        element: <UpdateToys></UpdateToys>,
+        loader: ({params}) => fetch(`http://localhost:5000/toys/${params.id}`)
       }
     ]
   },
