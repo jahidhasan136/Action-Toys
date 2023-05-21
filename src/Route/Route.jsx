@@ -37,7 +37,7 @@ const router = createBrowserRouter([
       {
         path: '/toys/:id',
         element: <PrivateRoute><ToysDetails></ToysDetails></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/toys/${params.id}`)
+        loader: ({ params }) => fetch(`https://action-toys-server-nurmorshed7987-gmailcom.vercel.app/toys/${params.id}`)
       },
       {
         path: '/blog',
@@ -46,7 +46,7 @@ const router = createBrowserRouter([
       {
         path: '/all-toys',
         element: <AllToys></AllToys>,
-        loader: () => fetch('http://localhost:5000/toys')
+        loader: () => fetch('https://action-toys-server-nurmorshed7987-gmailcom.vercel.app/toys')
       },
       {
         path: '/add-toys',
@@ -59,7 +59,7 @@ const router = createBrowserRouter([
       {
         path: '/update-toys/:id',
         element: <UpdateToys></UpdateToys>,
-        loader: ({params}) => fetch(`http://localhost:5000/toys/${params.id}`)
+        loader: ({params}) => fetch(`https://action-toys-server-nurmorshed7987-gmailcom.vercel.app/toys/${params.id}`)
       }
     ]
   },

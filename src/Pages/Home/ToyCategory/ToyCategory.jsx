@@ -11,7 +11,7 @@ const ToyCategory = () => {
     const [category, setCategory] = useState('avengers')
     // console.log(category)
     useEffect(() => {
-        fetch('http://localhost:5000/toys')
+        fetch('https://action-toys-server-nurmorshed7987-gmailcom.vercel.app/toys')
             .then(res => res.json())
             .then(data => {
                 console.log(data)

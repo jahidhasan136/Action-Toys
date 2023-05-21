@@ -32,7 +32,7 @@ const UpdateToys = () => {
             email, 
             description
         }
-        fetch(`http://localhost:5000/toys/${_id}`, {
+        fetch(`https://action-toys-server-nurmorshed7987-gmailcom.vercel.app/toys/${_id}`, {
             method: 'PATCH',
             headers: {
                 'content-type' : 'application/json'

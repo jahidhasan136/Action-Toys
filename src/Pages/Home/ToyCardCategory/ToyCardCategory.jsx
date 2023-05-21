@@ -1,14 +1,6 @@
-import React from 'react';
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
-import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 
-import img3 from '../../../assets/toys/img3.jpg'
-import img8 from '../../../assets/toys/img8.jpg'
-import img4 from '../../../assets/toys/img4.jpg'
-import img5 from '../../../assets/toys/img5.jpg'
-import img1 from '../../../assets/toys/img1.jpg'
-import img11 from '../../../assets/toys/img11.jpg'
 import { Link } from 'react-router-dom';
 
 const ToyCardCategory = ({ toy }) => {
