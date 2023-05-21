@@ -12,7 +12,7 @@ const AddToys = () => {
         const form = event.target 
         const name = form.name.value 
         const subCategory = form.subCategory.value 
-        const price = form.price.value
+        const price = parseFloat(form.price.value)
         const rating = form.rating.value 
         const quantity = form.quantity.value 
         const picture = form.picture.value 
