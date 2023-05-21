@@ -1,15 +1,12 @@
 import { Link } from "react-router-dom";
 
 
-const SingleToys = ({ allToys, toys }) => {
+const SingleToys = ({ index, toys }) => {
     const { name, subcategory, quantity, price, _id } = toys
-    // let count;
-    for (let i = 0; i < allToys.length; i+= 2) {
-        // count[i]
-    }
+    
     return (
         <tr>
-            <th>{1}</th>
+            <th>{index + 1}</th>
             <td>{name}</td>
             <td>{subcategory}</td>
             <td>{price}</td>

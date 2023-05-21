@@ -7,7 +7,7 @@ import UseTitles from '../../Share/Hooks/UseTitles';
 const ToysDetails = () => {
     const categoryDetails = useLoaderData()
     console.log(categoryDetails)
-    const { picture, name, price, quantity, rating } = categoryDetails
+    const { picture, name, price, quantity, rating, sellername, email } = categoryDetails
     UseTitles('Toy Details')
     return (
         <div className="my-32 max-w-[1240px] mx-auto p-10">
@@ -29,6 +29,8 @@ const ToysDetails = () => {
                         <p className='inline-block px-4 py-1 bg-gradient-to-t from-[#F2713A] to-[#B62767]'>Quantity- {quantity}</p>
                         <button className='btn rounded-none flex gap-2 bg-gradient-to-r from-[#F2713A] to-[#B62767] hover:from-[#B63767] hover:to-[#F2713A]'>Add to Cart <FaShoppingCart className='text-lg'></FaShoppingCart></button>
                     </div>
+                    <p><span className='font-bold'>Seller Name:</span> {sellername}</p>
+                    <p><span className='font-bold'>Seller Email:</span> {email}</p>
                     <p className='flex items-center gap-2'><FaRegHeart></FaRegHeart> Add to whislist</p>
                 </div>
             </div>
