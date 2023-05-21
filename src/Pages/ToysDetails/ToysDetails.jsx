@@ -7,7 +7,7 @@ import UseTitles from '../../Share/Hooks/UseTitles';
 const ToysDetails = () => {
     const categoryDetails = useLoaderData()
     console.log(categoryDetails)
-    const { picture, name, price, quantity, rating, sellername, email } = categoryDetails
+    const { picture, name, price, quantity, rating, sellername, email, description } = categoryDetails
     UseTitles('Toy Details')
     return (
         <div className="my-32 max-w-[1240px] mx-auto p-10">

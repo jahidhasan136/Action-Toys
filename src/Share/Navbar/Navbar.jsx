@@ -39,7 +39,7 @@ const Navbar = () => {
                                 user
                                     ?
                                     <>
-                                        <li>My Toys</li>
+                                        <Link to="/my-toys">My Toys</Link>
                                         <Link to="/add-toys">Add A Toy</Link>
                                         <li onClick={handleLogout} className='cursor-pointer'>Log out</li>
                                     </>
@@ -62,7 +62,7 @@ const Navbar = () => {
                             user
                                 ?
                                 <>
-                                    <li>My Toys</li>
+                                    <Link to="/my-toys">My Toys</Link>
                                     <Link to="/add-toys">Add A Toy</Link>
                                     <li onClick={handleLogout} className='cursor-pointer'>Log out</li>
                                 </>
