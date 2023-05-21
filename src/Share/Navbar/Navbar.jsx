@@ -33,7 +33,7 @@ const Navbar = () => {
                         </label>
                         <ul tabIndex={0} className=" text-white menu menu-compact dropdown-content mt-3 p-5 shadow bg-base-100 rounded-box w-52 grid gap-3">
                             <Link to="/">Home</Link>
-                            <li>All Toys</li>
+                            <Link to="/alltoys">All Toys</Link>
                             <Link to="/blog">Blogs</Link>
                             {
                                 user
@@ -56,7 +56,7 @@ const Navbar = () => {
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 gap-8">
                         <Link to="/">Home</Link>
-                        <li>All Toys</li>
+                        <Link to="/alltoys">All Toys</Link>
                         <Link to="/blog">Blogs</Link>
                         {
                             user

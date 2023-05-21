@@ -1,82 +1,101 @@
 [
     {
       "name": "Thor",
+      "sellername": "ToyWorld",
       "picture": "https://i.ibb.co/T8RQKkG/img3.jpg",
       "price": "$19.99",
       "rating": 2.5,
-      "quantity": 100,
-      "subcategory": "avengers"
+      "quantity": 10,
+      "subcategory": "avengers",
+      "email": "actionzone@example.com"
     },
     {
       "name": "Groot",
+      "sellername": "ActionZone",
       "picture": "https://i.ibb.co/0J1XkPm/img8.jpg",
       "price": "$24.99",
       "rating": 2,
-      "quantity": 75,
-      "subcategory": "avengers"
+      "quantity": 5,
+      "subcategory": "avengers",
+      "email": "playtimepalace@example.com"
     },
     {
       "name": "Hulk",
+      "sellername": "PlaytimePalace",
       "picture": "https://i.ibb.co/RT3f3zz/img4.jpg",
       "price": "$29.99",
       "rating": 1,
-      "quantity": 120,
-      "subcategory": "marvel"
+      "quantity": 2,
+      "subcategory": "marvel",
+      "email": "supertoysales@example.com"
     },
     {
       "name": "Spider Man",
+      "sellername": "SuperToys",
       "picture": "https://i.ibb.co/1fxsKcc/img5.jpg",
       "price": "$17.99",
       "rating": 2,
-      "quantity": 50,
-      "subcategory": "marvel"
+      "quantity": 25,
+      "subcategory": "marvel",
+      "email": "toyseller1@example.com"
     },
     {
       "name": "Ree",
+      "sellername": "FunTimeCollectibles",
       "picture": "https://i.ibb.co/19CpPPR/img11.jpg",
       "price": "$22.99",
       "rating": 1.5,
-      "quantity": 90,
-      "subcategory": "starwars"
+      "quantity": 9,
+      "subcategory": "starwars",
+      "email": "funtimecollectibles@example.com"
     },
     {
       "name": "Storm Trooper",
+      "sellername": "AdventureToyz",
       "picture": "https://i.ibb.co/1XVVjtK/img1.jpg",
       "price": "$32.99",
       "rating": 3,
-      "quantity": 80,
-      "subcategory": "starwars"
+      "quantity": 35,
+      "subcategory": "starwars",
+      "email": "adventuretoyz@example.com"
     },
     {
       "name": "Pirate Captain",
+      "sellername": "ToyLandia",
       "picture": "https://example.com/pirate-captain.jpg",
       "price": "$21.99",
       "rating": 4.3,
-      "quantity": 65,
-      "subcategory": "Pirates"
+      "quantity": 15,
+      "subcategory": "transformer",
+      "email": "toylandia_sales@example.com"
     },
     {
       "name": "Alien Invader",
+      "sellername": "MegaToyStore",
       "picture": "https://example.com/alien-invader.jpg",
       "price": "$26.99",
       "rating": 4.7,
-      "quantity": 110,
-      "subcategory": "Sci-Fi"
+      "quantity": 11,
+      "subcategory": "transformer"
     },
     {
       "name": "Action Sports Star",
+      "sellername": "ActionMania",
       "picture": "https://example.com/action-sports-star.jpg",
       "price": "$18.99",
       "rating": 4.1,
-      "quantity": 60,
-      "subcategory": "Sports"
+      "quantity": 22,
+      "subcategory": "transformer",
+      "email": "megatoystore@example.com"
     },
     {
       "name": "Secret Agent Spy",
+      "sellername": "ToyHaven",
       "picture": "https://example.com/secret-agent-spy.jpg",
       "price": "$23.99",
       "rating": 4.4,
-      "quantity": 95,
-      "subcategory": "Espionage"
+      "quantity": 7,
+      "subcategory": "transformer",
+      "email": "actionmania_sales@example.com"
     }
   ]
