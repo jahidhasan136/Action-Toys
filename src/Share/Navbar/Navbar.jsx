@@ -33,14 +33,14 @@ const Navbar = () => {
                         </label>
                         <ul tabIndex={0} className=" text-white menu menu-compact dropdown-content mt-3 p-5 shadow bg-base-100 rounded-box w-52 grid gap-3">
                             <Link to="/">Home</Link>
-                            <Link to="/alltoys">All Toys</Link>
+                            <Link to="/all-toys">All Toys</Link>
                             <Link to="/blog">Blogs</Link>
                             {
                                 user
                                     ?
                                     <>
                                         <li>My Toys</li>
-                                        <li>Add A Toy</li>
+                                        <Link to="/add-toys">Add A Toy</Link>
                                         <li onClick={handleLogout} className='cursor-pointer'>Log out</li>
                                     </>
                                     :
@@ -56,14 +56,14 @@ const Navbar = () => {
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 gap-8">
                         <Link to="/">Home</Link>
-                        <Link to="/alltoys">All Toys</Link>
+                        <Link to="/all-toys">All Toys</Link>
                         <Link to="/blog">Blogs</Link>
                         {
                             user
                                 ?
                                 <>
                                     <li>My Toys</li>
-                                    <li>Add A Toy</li>
+                                    <Link to="/add-toys">Add A Toy</Link>
                                     <li onClick={handleLogout} className='cursor-pointer'>Log out</li>
                                 </>
                                 :
