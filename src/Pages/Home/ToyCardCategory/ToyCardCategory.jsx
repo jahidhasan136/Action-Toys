@@ -8,7 +8,7 @@ const ToyCardCategory = ({ toy }) => {
 
     return (
         <div className="md:flex gap-10">
-            <div className="card card-side bg-base-100 shadow-2xl w-[500px]">
+            <div className="card card-side bg-base-100 shadow-2xl md:w-[500px]">
                 <figure><img className="w-64 h-full" src={picture} alt="Movie" /></figure>
                 <div className="card-body grid">
                     <h2 className="card-title text-3xl">{name}</h2>

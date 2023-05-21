@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <div className="bg-base-200">
             <div className="max-w-[1240px] container mx-auto pb-6">
-                <footer className="footer flex justify-between p-10 text-base-content">
+                <footer className="footer md:flex justify-between p-10 text-base-content">
                     <div>
                         <span className="footer-title">Services</span>
                         <a className="link link-hover">Branding</a>
@@ -39,7 +39,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </footer>
-                <footer className="footer items-center flex justify-between px-10 text-neutral-content">
+                <footer className="footer items-center md:flex justify-between px-10 text-neutral-content">
                     <div>
                         <p>Action Toys Ltd.<br />Providing reliable tech since 1992</p>
                     </div>
